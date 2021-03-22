@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void printText(View view){
-        String textToPrint = "Hello World!";
+        String textToPrint = "";
+        EditText inputfield =(EditText) findViewById(R.id.editTextField);
+        textToPrint = inputfield.getText().toString();
         TextView output = (TextView) findViewById(R.id.outputField);
         output.setText(textToPrint);
     }
