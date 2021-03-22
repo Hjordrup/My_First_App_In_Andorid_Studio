@@ -18,9 +18,6 @@
         app:layout_constraintVertical_bias="0.3"
         />
 
-
-
-
     <EditText
         android:id="@+id/editTextField"
         android:layout_width="wrap_content"
@@ -30,8 +27,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
 
+        />
 
     <Button
         android:onClick="printText"
@@ -39,11 +36,14 @@
         android:layout_height="wrap_content"
         android:text="Press Me!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
+        app:layout_constraintVertical_bias="0.651"
+
+
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
