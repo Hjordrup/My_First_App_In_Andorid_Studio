@@ -2,13 +2,13 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +18,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void printText(View view){
-        String textToPrint = "";
-        EditText inputfield =(EditText) findViewById(R.id.editTextField);
-        textToPrint = inputfield.getText().toString();
-        TextView output = (TextView) findViewById(R.id.outputField);
-        output.setText(textToPrint);
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.editTextField);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+
     }
 
 }
